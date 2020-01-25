@@ -3,12 +3,12 @@
 <div class="aboutPage">
   <div class="row">
     
-    <div class="main col-md-12 col-lg-12">
+    <div class="main col-md-12 col-sm-12 col-xs-12 col-lg-12">
        
-      <div class=" firstSection col-md-4 col-lg-4">
+      <div class=" firstSection col-md-4 col-sm-12 col-xs-12  col-lg-4">
          <div ref="picture" class="Picture"><img src="../assets/me.jpg" alt=""></div>
       </div>
-      <div ref="text" class="content col-md-6 col-lg-6">
+      <div ref="text" class="content col-md-6 col-sm-12 col-xs-12 col-lg-6">
         <h1 class="">About Me.</h1><br><br>
         <p>Hello! I'm Achraf, a web devloper based in Hamilton, ON who enjoys building things, pecializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
         <p>After graduating from Specialized Institute of Applied Technology in Morocco, I started working as a freelancer with much small company who they need a website for their business. </p>
@@ -242,6 +242,11 @@ $textColor:#8892b0;
 
       }
  
+
+
+
+   // --------------------------Responsive-------------------------
+
 
 
 </style>

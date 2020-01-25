@@ -14,11 +14,11 @@
       </transition>
 
        <!-- ------------------------ -->
-      
-       <app-footer></app-footer>
+      <app-footer></app-footer>
+       
   </div>
- <app-barShow></app-barShow>
-<app-homeBar></app-homeBar>
+ <app-barShow class="d-none d-sm-none d-md-block d-lg-block"></app-barShow>
+<app-homeBar class="d-none d-sm-none d-md-block d-lg-block"></app-homeBar>
 
 </div>
 </template>

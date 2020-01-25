@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time jop opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form id="contact-form" class="col-md-12"  >
+     <form id="contact-form" class="col-md-12"  data-netlify="true">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
@@ -29,7 +29,7 @@
         </div>
        </div>
         <div class="col-lg-12 col-md-12 text-center">
-          <button  @click.prevent="sendEmail" value="Send Email" class="submit">Send Message</button>
+          <button type="submit"  @click.prevent="sendEmail" value="Send Email" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
           <span class="info">If you'd rather get in touch with me by email <span class="microInfo">gaoubouzi@gmail.com</span> or phone <span class="microInfo">+212 6 97 85 41 90</span> I'll happy to hear from you.</span>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import emailjs from 'emailjs-com';
+
 export default {
   data(){
     return{
@@ -78,6 +78,7 @@ export default {
   methods:{
       sendEmail:(e)=>{
       if(!this.Name==="" && !this.Email==="" && !this.Message===""){
+        return 
         
       }
       else   

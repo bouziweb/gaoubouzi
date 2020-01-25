@@ -2,18 +2,18 @@
   
     <div class="homePage">
      <div class="row">
-       <div class=" main col-md-12 col-lg-12">
-         <div ref="content" class="TitleName col-md-6">
+       <div class=" main col-md-12 col-sm-12 col-lg-12">
+         <div ref="content" class="TitleName col-sm-12 col-xs-12 col-lg-6">
            <h1 ref="name">Achraf Bouzi</h1>
            <h2>I'm Achraf</h2>
            <h2 class="textMoving">   Web developer</h2>
            <h2>Quality Product</h2>
            <div class="AboutMe ">
-             <p ref="text">Hi, I'm Achraf Gaoubouzi. A full stack web developer  based in Hamilton, Canada. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
+             <p ref="text" class="col-md-12">Hi, I'm Achraf Gaoubouzi. A full stack web developer  based in Hamilton, Canada. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.</p>
            </div>
 
          </div>
-        <div class="imgSvg col-md-4">
+        <div class="imgSvg col-lg-4 d-none d-sm-none d-md-block d-lg-block  col-md-4">
           <img ref="img" src="../assets/work.svg" alt="">
         </div>
         
@@ -173,6 +173,7 @@ export default {
     text-align: right;
     img{
         width: 400px;
+        height: 100%;
     }
   }
 
@@ -184,9 +185,31 @@ export default {
 
   
  
-  
+  // --------------------------Responsive-------------------------
       
 
+
+@media (max-width: 992px) {
+  .imgSvg img{
+    display: none;
+    
+  }
+  p{
+    max-width: 500px;
+    color: red
+  }
+ 
+}
+
+@media (max-width: 575px) {
+  content h1{
+    font-size: 55px;
+
+  }
+   content h2{
+    font-size: 35px;
+  }
+}
     
    
       

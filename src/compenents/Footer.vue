@@ -28,6 +28,8 @@ export default {
 
 <style lang="scss" scoped>
 
+footer{
+  min-width: 100vw;
   .footer{
         bottom: 0;
         padding-bottom: 10px;
@@ -36,8 +38,23 @@ export default {
         text-align: center;
         font-family: Nunito,sans-serif;
         font-weight: 700;
-        right: 40%;
+        min-width: 100%;
         font-size: 12px;
         opacity: .3;
       }
+}
+
+
+
+
+ // --------------------------Responsive-------------------------
+      
+
+
+@media (max-width: 480px) {
+   .footer{
+     font-size: 9px;
+   }
+}
+    
 </style>
