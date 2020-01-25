@@ -196,7 +196,7 @@ export default {
   }
   p{
     max-width: 500px;
-    color: red
+    color: red !important
   }
  
 }
