@@ -1,9 +1,11 @@
 <template>
   <div class="skills container">
     <div class="row"><h1>My Skills</h1></div>
-      <div ref="skills" class="main col-md-12 col-lg-12 col-sm-12 col-xs-12">
-       
-        <div class="skill col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <div ref="skills" class="main col-md-12 col-lg-12">
+        
+       <div class="row">
+         
+        <div class="skill col-md-4 col-lg-4 ">
           <h3>Fornt-End</h3>
           <ul>
             <li>Html5</li>
@@ -15,7 +17,7 @@
           </ul>
         </div>
 
-         <div class="skill col-md-4 col-lg-4 col-sm-12 col-xs-12">
+         <div class="skill col-md-4 col-lg-4">
           <h3>Back-End</h3>
           <ul>
             <li>Laravel Framework</li>
@@ -24,11 +26,11 @@
           </ul>
         </div>
 
-         <div class="skill col-md-4 col-lg-4 col-sm-12 col-xs-12">
+         <div class="skill col-md-4 col-lg-4 ">
           <h3>Other Things</h3>
           <ul>
             <li>Git / GitHub</li>
-            <li>Photoshop</li>
+            <li>Photoshop / Figma</li>
          
           </ul>
           <h3>THINGS I WANT TO LEARN</h3>
@@ -39,7 +41,7 @@
           </ul>
         </div>
 
-
+    </div>
       </div>
     </div>
 </template>
@@ -61,7 +63,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(skills,2,{opacity:0,y:80},{opacity:1,y:0},"=1.5")
+    tm.fromTo(skills,2,{opacity:0,y:80},{opacity:1,y:0},"=1")
     
     
     
@@ -79,31 +81,38 @@ $textColor:#8892b0;
 
 @mixin elementCenter() {
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap
 }
 *{
   padding:0;
   margin: 0;
+  box-sizing: border-box;
   
 }
 
 
 .skills{
-   width:100%;
-   height: 100vh;
+ 
    text-align: center;
-  @include elementCenter();
+   min-width: 100%;
+   min-height: 100vh;
+    @include elementCenter();
+    
+  
 
 
    h1{
             
+            align-self: flex-start;
             font-family: monospace;
+            
             font-size: 30px;
             color: #fff;
-            top: 15%;
-            position: absolute;
+            padding-top: 15%;
+            position: relative;
             &::after{
               content: "What I Can a DO ?";
               bottom: -10%;
@@ -115,27 +124,30 @@ $textColor:#8892b0;
             }
             &::before{
               content: "";
-              bottom: 40%;
+              bottom: 20%;
               left: 108%;
               position: absolute;
               background: #fff;
-              width: 100vh;
+              width:90vh;
               height: 1px;
-              opacity: .7;
+              opacity: .4;
             }
 
    
       }
   .main{
-    min-width:100%;
-    display: flex ;
-    justify-content: center;
+    min-width:300px;
+   align-self: flex-start;
+  
+   
+   
+ 
               &::before
                {
                   content: "<ul>";
                   color: $colorPrimary;
                   position: absolute;
-                  top: -43px;
+                  top: -23%;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
@@ -176,6 +188,7 @@ $textColor:#8892b0;
       margin: 0;
       opacity: 0.7;
       list-style: none;
+      flex-basis: 33.33333%;
       
       
       li{
@@ -225,6 +238,23 @@ $textColor:#8892b0;
     
   }
 }
+}
+
+
+  // --------------------------Responsive-------------------------
+
+
+@media (max-width: 773px) {
+
+  .main{
+    
+    padding-top: 25%;
+    &::before,&::after{
+      display: none
+    }
+
+  }
+  
 }
 
 

@@ -1,14 +1,8 @@
 <template>
   
-  <div class="intro">
+  <div class="intro container-fluid">
    
-      
-        <svg id="firstIntro" width="80" height="71" viewBox="0 0 80 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M53.7461 70.5H54.2461V70V2.46094V1.96094H53.7461H44.7935H44.2935V2.46094V30.999H11.2456V2.46094V1.96094H10.7456H1.83936H1.33936V2.46094V70V70.5H1.83936H10.7456H11.2456V70V39.2817H44.2935V70V70.5H44.7935H53.7461ZM77.5425 70.5H78.0425V70V19.8096V19.3096H77.5425H68.9609H68.4609V19.8096V70V70.5H68.9609H77.5425ZM69.1465 2.63605L69.1465 2.63599L69.1405 2.6428C68.2186 3.70137 67.7651 4.99658 67.7651 6.49658C67.7651 7.99641 68.2187 9.27976 69.1459 10.3101L69.1459 10.3101L69.1521 10.3167C70.1398 11.3751 71.5587 11.8672 73.3213 11.8672C75.0839 11.8672 76.5027 11.3751 77.4905 10.3167C78.4515 9.28713 78.9238 8.00152 78.9238 6.49658C78.9238 4.99156 78.4517 3.69404 77.496 2.63605C76.5094 1.54373 75.0887 1.0332 73.3213 1.0332C71.5539 1.0332 70.1331 1.54373 69.1465 2.63605Z" stroke="white"/>
-        </svg>
-      
-
-    
+    <div class="canter">
      
         <svg id="name"   width="892" height="82" viewBox="0 0 892 82" fill="none" xmlns="http://www.w3.org/2000/svg">
       
@@ -33,8 +27,10 @@
        
         </mask>
         </svg>
-
-
+     <div class="swipe-in-text">
+       <div class="text"><h1>FULL STACK DEVELOPER</h1></div>
+     </div>
+    </div>
     </div>
 
 
@@ -60,32 +56,30 @@ export default {
 .intro{
   width:100%;
   height: 100vh;
-  background-color: black;
+  background-color: #0D1729;
 
   
     
       
-    #firstIntro{
-      fill: #fff;
-      position: absolute;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      animation: displayHi 2s ease-in-out forwards , name 2s ease-in-out forwards 1s;
+ 
 
+}
 
-  }
+.canter{
 
+  position: absolute;
+  
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: fade-in 1s ease 7.5s forwards;
 
 }
 #name{
   
-  position: absolute;
-  visibility: hidden;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  animation: displayIntro 1.3s ease forwards 1s,fill 3s ease forwards 6.3s;
+  max-width: 100%;
+ 
+  animation: fill 3s ease forwards 6.3s;
   
   
   
@@ -94,7 +88,7 @@ export default {
  #name path:nth-child(1){
    stroke-dasharray: 277;
    stroke-dashoffset: 277;
-    animation: line-animation 2s ease forwards;
+    animation: line-animation 2s ease forwards 2.0s;
     
     
 
@@ -194,40 +188,44 @@ export default {
  
 // ----------------------------
 
-@keyframes displayHi {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
 
-  99% {
-    visibility: visible;
-    
-    
+.swipe-in-text{
+  position: relative;
+  display: inline-block;
+  visibility: hidden;
+  animation: hidde 0.2s  6.4s forwards;
+
+  &:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    bottom:0;
+    z-index: 1;
+    background-color: #38deed;
+    animation: swipe-in-text 1s ease-out 6.3s forwards;
+
   }
-  100% {
-    // visibility: hidden;
+  .text{
+    visibility: hidden;
     
-    transform: translateY(-231px);
-    
+     animation: showText 1s ease-in 6.6s forwards;
+    h1{
+      font-size:2vw;
+      text-transform: uppercase;
+      color: rgb(136, 146, 176);
+      font-weight: 800;
+      
+      }
+
+
   }
-  
 }
 // ----------------------------
-@keyframes displayIntro {
-  
-  99% {
-    visibility: hidden;
-    opacity: 0;
-    
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-    
-  }
-  
-}
+
 
 
 @keyframes line-animation {
@@ -249,45 +247,87 @@ export default {
 // ----------------------------
 
 @keyframes fill {
-  30%{
+  0%{
     fill: transparent;
     stroke: rgb(153, 2, 2);
 
    
      
   }
-  60%{
+  100%{
     fill: #fff ;
     stroke:#fff;
 
   }
-  99%{
-    
-    transform: rotateZ(89deg);
-    
-  }
-  100%{
-    width: 900px;
-    transform: rotateZ(89deg);
-    
-  }
-
+ 
 }
 
 // ----------------------------
 
 
-@keyframes name {
-  from{
-    font-size: 400px;
+@keyframes fade-in {
+  0%{
+    opacity: 1;
 
   }
-  to{
-    font-size: 100px;
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
   }
   
 }
 
 // ----------------------------
 
+
+@keyframes swipe-in-text{
+  0%{
+    width:0%;
+    right: 100%;
+    left: 0;
+
+
+  }
+  50%{
+    width:100%;
+    right: 0%;
+    left: 0;
+
+  }
+  100%{
+    width: 0%;
+    left: 100%;
+
+  }
+
+}
+
+// ----------------------------
+
+@keyframes showText{
+from{
+  visibility: hidden;
+    opacity: 0;
+}
+to{
+  visibility: visible;
+    opacity: 1;
+}
+
+}
+
+
+// ----------------------------
+
+@keyframes hidde{
+from{
+    visibility: hidden;
+}
+to{
+    visibility: visible;
+}
+
+}
 </style>

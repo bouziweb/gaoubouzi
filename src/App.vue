@@ -1,25 +1,33 @@
 <template>
 
-<div class="portfolio container">
-  
-   <!-- ------------------------ -->
-  <app-navbar></app-navbar>
-   <!-- ------------------------ -->
+<div>
+    <div v-if="show" class="intro">
+       <app-intro></app-intro>
+    </div>
 
-  <div  class="pages">
 
-      <transition name="fade" >
-        <router-view/>>  
+    <div v-else class="portfolio container">
         
-      </transition>
+      <!-- ------------------------ -->
+      <app-navbar></app-navbar>
+      <!-- ------------------------ -->
+      <!-- <app-intro class="intro"></app-intro> -->
+      <div  class="pages">
+          
+          <transition name="fade" >
+          <router-view/> 
+            
+            
+          </transition>
 
-       <!-- ------------------------ -->
-      <app-footer></app-footer>
-       
-  </div>
- <app-barShow class="d-none d-sm-none d-md-block d-lg-block"></app-barShow>
-<app-homeBar class="d-none d-sm-none d-md-block d-lg-block"></app-homeBar>
+          <!-- ------------------------ -->
+          <app-footer></app-footer>
+      
+      </div>
+      <app-barShow class="d-none d-sm-none d-md-block d-lg-block"></app-barShow>
+      <app-homeBar class="d-none d-sm-none d-md-block d-lg-block"></app-homeBar>
 
+      </div>
 </div>
 </template>
 
@@ -27,18 +35,33 @@
 
 
 <script>
-
+import intro from './compenents/Intro.vue'
 import Navbar from './compenents/Navbar.vue'
 import BarShow from './compenents/BarShow.vue'
 import Footer from './compenents/Footer.vue'
 import HomeBar from './compenents/HomeBar.vue'
+
+
 export default {
+
+  data(){
+    return{
+          show:true
+    }
+  },
+  created(){
+
+      setTimeout(() => this.show = false, 9000)
+
+  },
 
   components:{
     appNavbar:Navbar,
     appBarShow:BarShow,
     appFooter:Footer,
-    appHomeBar:HomeBar
+    appHomeBar:HomeBar,
+    appIntro:intro,
+   
     
   }
 
@@ -60,6 +83,28 @@ body{
    overflow-x: hidden;
    overflow-y: auto;
    position:relative;
+   &::before{
+   content: "</html>";
+    color: $colorPrimary;
+    position: absolute;
+    bottom:15px;
+    left: 1%;
+    font-size: 18px;
+    font-family: 'La Belle Aurore',cursive; 
+    opacity: 0.3;
+    z-index: 99;
+  }
+  &::after{
+    content: "<html>";
+    color: $colorPrimary;
+    position: absolute;
+    top: 15px;
+    left: 1%;
+    font-size: 18px;
+    font-family: 'La Belle Aurore',cursive; 
+    opacity: 0.3;
+    z-index: 99;
+  }
 }
 *{font-family: Nunito,sans-serif;
   padding:0;
@@ -72,6 +117,14 @@ body{
   overflow-y: scroll;
 }
 
+
+.intro{
+width:100vw;
+height: 100vh;
+top: 0;
+left: 0;
+z-index: 999999999;
+}
 // -----------------------ScrollBar--------------
 html::-webkit-scrollbar {
   width: .2em;
@@ -103,26 +156,7 @@ html::-webkit-scrollbar-thumb {
   
 
 
-  &::before{
-   content: "</html>";
-    color: $colorPrimary;
-    position: absolute;
-    bottom:15px;
-    left: -13%;
-    font-size: 18px;
-    font-family: 'La Belle Aurore',cursive; 
-    opacity: 0.2;
-  }
-  &::after{
-    content: "<html>";
-    color: $colorPrimary;
-    position: absolute;
-    top: 15px;
-    left: -13%;
-    font-size: 18px;
-    font-family: 'La Belle Aurore',cursive; 
-    opacity: 0.2;
-  }
+  
   
 } 
 

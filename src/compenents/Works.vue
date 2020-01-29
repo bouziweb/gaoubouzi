@@ -15,7 +15,7 @@
           <h3>Optometrist Project</h3>
           <div class="content2">
             <p>I  built this website shortly as a full-stack developer for an optometry who had  hired me to make a  website to grow thier business
-and to make sure the client was able to make an appointment and contact them easily</p>
+               and to make sure the client was able to make an appointment and contact them easily</p>
            
           </div>
            <div class="feature">
@@ -23,7 +23,6 @@ and to make sure the client was able to make an appointment and contact them eas
                 <li>JavaScript</li>
                 <li>jQeury</li>
                 <li>PHP</li>
-                <li>mysql</li>
               </ul>
             </div>
             <div class="links">
@@ -64,20 +63,21 @@ and to make sure the client was able to make an appointment and contact them eas
           <!-- ------------------------------------- -->
         <div class="row">
            <div class="mockup left col-md-6">
-           <div class="content1"><img src="../assets/works/dragaVision.png" alt=""></div>
+           <div class="content1"><img src="../assets/works/bouziWeb.png" alt=""></div>
         </div>
         <div class="discription right col-md-6">
           <h6>Featured Project</h6>
-          <h3>Optometrist Project</h3>
+          <h3>Social Media app (BouziWeb)</h3>
           <div class="content2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum explicabo vero corporis consequuntur officia amet tenetur alias, reprehenderit impedit, nesciunt est quod nulla recusandae! Velit perferendis dolore eligendi facilis.</p>
            
           </div>
            <div class="feature">
               <ul>
-                <li>JavaScript</li>
                 <li>jQeury</li>
-                <li>PHP</li>
+                <li>Laravel</li>
+                <li>Bootstrap</li>
+
               </ul>
             </div>
             <div class="links">
@@ -139,7 +139,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(work,2,{opacity:0,y:80},{opacity:1,y:0},"=1.5")
+    tm.fromTo(work,2,{opacity:0,y:80},{opacity:1,y:0},"=1")
     
     
     
@@ -293,6 +293,8 @@ $background-discription:#172945;
           padding: 20px;
           margin-top: 20px;
           border-radius: 3px;
+          pointer-events: none;
+          
         
           p
           {
@@ -369,6 +371,33 @@ $background-discription:#172945;
    
 }
 
+
+
+  // --------------------------Responsive-------------------------
+
+  @media (max-width:692px){
+
+
+      .mockup
+  {
+      .content1 
+      { 
+            padding-top: 20%;
+        .imageRight{
+          
+        }
+          img{
+              width: 100%;
+              max-width: 180%;
+          
+             
+             
+          
+            }
+      }
+  }
+
+  }
 
 
 </style>

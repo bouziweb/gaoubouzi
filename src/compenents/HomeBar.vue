@@ -3,9 +3,9 @@
   <div ref="homeBar" class="homeBar">
         <ul class="bar">
           
-          <li><i class="fab fa-instagram"></i></li>
-          <li><i class="fab fa-github-square"></i></li>
-          <li><i class="fab fa-linkedin"></i></li>
+          <li><a target="_blanck" href="//www.instagram.com/gaoubouzi/"><i class="fab fa-instagram"></i></a></li>
+          <li><a target="_blanck" href="https://github.com/bouziweb"><i class="fab fa-github-square"></i></a></li>
+          <li><a target="_blanck" href="https://www.linkedin.com/in/achraf-gaoubouzi-ba69b5121/"><i class="fab fa-linkedin"></i></a></li>
           
         </ul>
    </div>
@@ -27,7 +27,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(homeBar,10,{opacity:0,x:30},{opacity:1,x:0})
+    tm.fromTo(homeBar,3,{opacity:0,x:30},{opacity:1,x:0})
     
 
   }
@@ -55,7 +55,7 @@ $background:#0D1729;
     z-index: 99;
     padding: 0px;
     list-style-type: none;
-      li{
+      li,a{
         margin-top:6px;
         font-size: 20px;
         color: #fff;

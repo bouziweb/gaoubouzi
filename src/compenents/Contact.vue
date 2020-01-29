@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time jop opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form id="contact-form" class="col-md-12"  data-netlify="true">
+     <form id="contact-form" data-netlify="true"  action="POST"  class="col-md-12">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
@@ -22,14 +22,14 @@
         </div>
      </div>
        <div class="row text-center">
-          <div class="input  col-lg-12 col-md-8 col-sm-12">
+          <div class="input  col-lg-12 col-md-12 col-sm-12">
              <input type="text" v-model="Message" autocomplete="off" name="message" required/>
              <label for="name"   class="label-name"><span class="content-name">Message</span></label>
              <span class="error"   id="message">{{ErrorMessage}}</span>
         </div>
        </div>
         <div class="col-lg-12 col-md-12 text-center">
-          <button type="submit"  @click.prevent="sendEmail" value="Send Email" class="submit">Send Message</button>
+          <button  type="submit"     value="Send Email" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
           <span class="info">If you'd rather get in touch with me by email <span class="microInfo">gaoubouzi@gmail.com</span> or phone <span class="microInfo">+212 6 97 85 41 90</span> I'll happy to hear from you.</span>
@@ -46,6 +46,7 @@
 <script>
 
 export default {
+
   data(){
     return{
      
@@ -67,7 +68,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(touch,3,{opacity:0,y:-60},{opacity:1,y:0})
+    tm.fromTo(touch,2,{opacity:0,y:-60},{opacity:1,y:0})
     
     
     
@@ -76,24 +77,74 @@ export default {
 
 
   methods:{
-      sendEmail:(e)=>{
-      if(!this.Name==="" && !this.Email==="" && !this.Message===""){
-        return 
+      sendEmail(e){
+               
+        //  if(this.Name===""){
+        //   this.ErrorName="Insert your name Please!"
+        //  }
+        //   else if(this.Email===""){
+        //   this.ErrorEmail="Insert your Email Please!"
+        // }
+        //  else if(this.Message===""){
+        //   this.ErrorMessage="Insert your Message Please!"
+        // }
+
+      
+                e.preventDefault();
+                let currentObj = this;
+                this.axios.post('http://localhost:8000/php/contact.php', {
+                    name: this.Name,
+                    email: this.Email,
+                    Message:this.Message
+                })
+                .then(function (response) {
+                    currentObj.output = response.data;
+                })
+                .catch(function (error) {
+                    currentObj.output = error;
+                });
+            }
         
-      }
-      else   
-         if(this.Name===""){
-          this.ErrorName="Insert your name Please!"
        
-          if(this.Email===""){
-          this.ErrorEmail="Insert your Email Please!"
-        }
-         if(this.Message===""){
-          this.ErrorMessage="Insert your Message Please!"
-        }
-        }
+        //       else 
+        //       // if(!this.Name==="" && !this.Email==="" && !this.Message===""){
+               
+                  
+                  // $('#contact-form').submit(function(e) {
+                      // e.preventDefault();
+                      // var postdata = $('#contact-form').serialize();
+                      //  console.log(this.Name,this.Email,this.Message)
+                      // $.ajax({
+                      //     type: 'POST',
+                      //     url: '../php/contact.php',
+                      //     data: postdata,
+                      //     dataType: 'json',
+                      //     success: function(json) {
+                              
+                      //         if(json.isSuccess) 
+                      //         {
+                                 
+                      //             alert('good job');
+                      //             this.Name="";
+                      //             this.Email="";
+                      //             this.Message="";
+                      //         }
+                                        
+                      //     }
+                      // });
+                  // });
+
          
-    }
+              
+      // }
+
+
+
+                
+         
+        
+         
+    
   }
 }
 </script>
@@ -168,7 +219,7 @@ margin: 0;
   form{
     width: 100%;
     display: inline-table;
-    padding: 0px 150px;
+    padding: 0px 100px;
 
      &::before
                {
@@ -179,7 +230,7 @@ margin: 0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.1;
+                  opacity: 0.3;
                 }
                 &::after
                 {
@@ -190,7 +241,7 @@ margin: 0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.1;
+                  opacity: 0.3;
                 }
     .submit{
     width: 150px;
@@ -289,5 +340,34 @@ margin: 0;
             }
 
  
+
+
+
+ @media(max-width:700px){
+   .contact{
+         min-height: 100%;
+        
+         form{
+          padding:0px;
+        }
+        h1{
+          top:5%
+        }
+        h2{
+          padding-top: 10px;
+          font-size: 35px;
+        }
+        .discreption{
+          margin-top: 0;
+
+          p{
+          font-size: 15px;
+        }
+
+        }
+       
+        
+   }
+ }
 
 </style>

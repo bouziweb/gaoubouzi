@@ -8,13 +8,13 @@
       <div class=" firstSection col-md-4 col-sm-12 col-xs-12  col-lg-4">
          <div ref="picture" class="Picture"><img src="../assets/me.jpg" alt=""></div>
       </div>
-      <div ref="text" class="content col-md-6 col-sm-12 col-xs-12 col-lg-6">
+      <div ref="text" class="content col-md-6 col-sm-12  col-12 col-xs-12 col-lg-6">
         <h1 class="">About Me.</h1><br><br>
         <p>Hello! I'm Achraf, a web devloper based in Hamilton, ON who enjoys building things, pecializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
         <p>After graduating from Specialized Institute of Applied Technology in Morocco, I started working as a freelancer with much small company who they need a website for their business. </p>
         <div class="col-md-12 links">
           <p class="col-md-5"> See my resume</p>
-          <p class="col-md-5"> Messege me</p>
+        <p class="col-md-6">  <router-link  to="/contact"> Messege me</router-link></p>
         </div>
       </div>
         
@@ -42,7 +42,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(text,2,{opacity:0,x:80},{opacity:1,x:0})
+    tm.fromTo(text,1,{opacity:0,x:80},{opacity:1,x:0})
     .fromTo(picture,1,{opacity:0,x:-30},{opacity:1,x:0})
     
     
@@ -109,8 +109,8 @@ $textColor:#8892b0;
       {
           margin: 50px;
           margin: 50px;
-          display: flex;
-          flex-direction: row;
+          display: inline-block;
+          
           align-items: center;
           P{
              
@@ -157,7 +157,7 @@ $textColor:#8892b0;
               overflow: hidden;
               padding: 0;
               margin: 20px;
-              .links p{
+              .links p,a{
                 font-size: 12px;
                 color: $colorPrimary !important;
                 opacity: .8;
@@ -189,6 +189,7 @@ $textColor:#8892b0;
         {
           width: auto;
           position: relative;
+          float: left;
 
            &::before
            {
@@ -247,6 +248,68 @@ $textColor:#8892b0;
 
    // --------------------------Responsive-------------------------
 
+  @media(max-width: 995px)
+  {
+    .aboutPage{
+         .main{
+            display: inline-block;
+            .Picture{
+              img{
+                float: left;
+              }
+            } 
+            .content{
+              float: right;
+            }
+          }
+    }
+   
+  }
 
+
+  @media(max-width: 600px)
+  {
+    .aboutPage{
+         .main{
+           margin: auto;
+            text-align: center;
+            .content{
+             max-width: 400px;
+             min-width: 200px;
+             padding: auto 0;
+             float: left;
+             p{
+               font-size: 13px;
+             }
+              
+            }
+          }
+    }
+   
+  }
+
+  @media(max-width: 450px)
+  {
+    .aboutPage{
+         .main{
+           margin: auto;
+            text-align: center;
+            .Picture{
+             margin-left: 35px;
+            } 
+            .content{
+             max-width: 350px;
+             
+             padding: auto 0;
+             float: left;
+             p{
+               font-size: 13px;
+             }
+              
+            }
+          }
+    }
+   
+  }
 
 </style>

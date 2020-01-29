@@ -196,19 +196,33 @@ export default {
   }
   p{
     max-width: 500px;
-    color: red !important
+    
   }
  
 }
 
 @media (max-width: 575px) {
-  content h1{
-    font-size: 55px;
 
+  .homePage{
+    .TitleName{
+      h1{
+          font-size: 40px;
+          margin-bottom: -25px;
+      }
+      h2{
+         font-size: 30px;
+         margin-bottom: 3px;
+      }
+     .textMoving
+     {
+       font-size: 25px;
+     }
+     p{
+       font-size: 12px;
+     }
+    }
   }
-   content h2{
-    font-size: 35px;
-  }
+ 
 }
     
    

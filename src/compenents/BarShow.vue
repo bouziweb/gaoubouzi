@@ -36,7 +36,7 @@ export default {
     const tm = new TimelineMax();
 
     
-    tm.fromTo(barShow,5,{opacity:0,x:-10},{opacity:1,x:0})
+    tm.fromTo(barShow,3,{opacity:0,x:-10},{opacity:1,x:0})
     
 
   }

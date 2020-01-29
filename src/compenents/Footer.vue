@@ -52,9 +52,12 @@ footer{
 
 
 @media (max-width: 480px) {
-   .footer{
+   footer{
+  
+  .footer{
      font-size: 9px;
-   }
+      }
+}
 }
     
 </style>

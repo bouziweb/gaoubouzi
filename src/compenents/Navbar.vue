@@ -64,7 +64,7 @@ a{
 }
   .navbar{
     min-height: 100vh;
-    width: 15%;
+    width: 200px;
     text-align: center;
     background-color: $navbarColor;
     z-index: 99;
@@ -74,7 +74,7 @@ a{
     border-left: 1px solid $navColor;
     transition: all .8s ease;
     top: 0;
-    transform:translateX(100vh);
+    transform:translateX(200px);
 
     .nav{
       display: block;
