@@ -1,3 +1,3 @@
 module.exports={
-  publicPath:anotherweb
+  publicPath: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/'
 }
