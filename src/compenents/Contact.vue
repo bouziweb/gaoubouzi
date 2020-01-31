@@ -5,7 +5,7 @@
   <div class="row  text-center">
     <h2 ref="touch" class="col-md-12 text-center">Get In Touch</h2>
     
-    <div class="col-md-12  discreption"><p> I'm  currently looking for full time jop opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
+    <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
      <form id="contact-form" data-netlify="true"  action="POST"  class="col-md-12">
      <div class="row justify-content-between">

@@ -14,8 +14,8 @@
           <h6>Featured Project</h6>
           <h3>Optometrist Project</h3>
           <div class="content2">
-            <p>I  built this website shortly as a full-stack developer for an optometry who had  hired me to make a  website to grow thier business
-               and to make sure the client was able to make an appointment and contact them easily</p>
+            <p>I built this website recently as a full-stack developer for an optometrist who had  hired me to make a  website to grow thier business
+               and to make sure their  clients are able to make an appointments and contact them easily</p>
            
           </div>
            <div class="feature">
