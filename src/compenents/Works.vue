@@ -186,13 +186,13 @@ $background-discription:#172945;
             top: 15%;
             position: absolute;
             &::after{
-              content: "I take care about the details.";
+              content: "I care about the details.";
               bottom: -10%;
               right: -25%;
               position: absolute;
               font-size: 7px;
               color: white;
-              opacity: 1;
+              opacity: 0.7;
             }
             &::before{
               content: "";
@@ -202,7 +202,7 @@ $background-discription:#172945;
               background: #fff;
               width: 100vh;
               height: 1px;
-              opacity: .7;
+              opacity: .4;
             }
 
    

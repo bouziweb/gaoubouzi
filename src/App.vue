@@ -91,7 +91,7 @@ body{
     left: 1%;
     font-size: 18px;
     font-family: 'La Belle Aurore',cursive; 
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: 99;
   }
   &::after{
@@ -102,7 +102,7 @@ body{
     left: 1%;
     font-size: 18px;
     font-family: 'La Belle Aurore',cursive; 
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: 99;
   }
 }

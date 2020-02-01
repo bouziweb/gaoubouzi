@@ -18,11 +18,11 @@ export default {
   data(){
     return{
       links:[
-        {path:'/',name:'home'},
-        {path:'/about',name:'about'},
-        {path:'/skills',name:'skills'},
-        {path:'/works',name:'works'},
-        {path:'/contact',name:'contact'}
+        {path:'/',name:'Home'},
+        {path:'/about',name:'About'},
+        {path:'/skills',name:'Skills'},
+        {path:'/works',name:'Works'},
+        {path:'/contact',name:'Contact'}
       ],
       active:true
 
