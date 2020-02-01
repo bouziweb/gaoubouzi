@@ -248,12 +248,20 @@ $textColor:#8892b0;
 
   .main{
     
-    padding-top: 25%;
+    padding-top: 10%;
+    padding-bottom:15%;
     &::before,&::after{
       display: none
     }
+    
 
   }
+
+  .skills h1 {
+  
+    padding-top: 30%;
+  
+}
   
 }
 
