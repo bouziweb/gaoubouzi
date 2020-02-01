@@ -32,7 +32,7 @@
           <button  type="submit"     value="Send Email" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
-          <span class="info">If you'd rather get in touch with me by email <a href="mailto:gaoubouzi@gmail.com"><span  class="microInfo">gaoubouzi@gmail.com</span></a> or phone <span class="microInfo">+212 6 97 85 41 90</span> I'll happy to hear from you.</span>
+          <span class="info">If you'd rather get in touch with me by email <a href="mailto:gaoubouzi@gmail.com"><span  class="microInfo">gaoubouzi@gmail.com</span></a> or phone <span class="microInfo">+1 289 941 3488</span> I'll happy to hear from you.</span>
         </div>
     </form>
   </div>
