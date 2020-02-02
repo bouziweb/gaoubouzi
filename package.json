@@ -45,4 +45,14 @@
   "main": "webpack.config.js",
  
     
- 
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bouziweb/gaoubouzi.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/bouziweb/gaoubouzi/issues"
+  },
+  "homepage": "https://github.com/bouziweb/gaoubouzi"
+}
