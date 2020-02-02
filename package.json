@@ -2,13 +2,12 @@
   "name": "portfolio",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "bouziweb <bouziweb@gmail.com>",
+  "author": "",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "deploy": "gh-pages -d dist"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "@sendgrid/mail": "^6.5.1",
@@ -41,15 +40,5 @@
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
-  },
-  "main": "webpack.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bouziweb/gaoubouzi.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/bouziweb/gaoubouzi/issues"
-  },
-  "homepage": "https://github.com/bouziweb/gaoubouzi"
+  }
 }
