@@ -10,11 +10,11 @@
       </div>
       <div ref="text" class="content col-md-6 col-sm-12  col-12 col-xs-12 col-lg-6">
         <h1 class="">About Me.</h1><br><br>
-        <p>Hello! I'm Achraf, a web devloper based in Hamilton, ON who enjoys building things, pecializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
-        <p>After graduating from Specialized Institute of Applied Technology in Morocco, I started working as a freelancer with much small company who they need a website for their business. </p>
+        <p>Hello! I'm Achraf, a web devloper based in Hamilton, ON who enjoys building things, specializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
+        <p>After graduating from Specialized Institute of Applied Technology in Morocco, I started working as a freelancer with a very small company who needed a website for their business. </p>
         <div class="col-md-12 links">
           <p class="col-md-5"> See my resume</p>
-        <p class="col-md-6">  <router-link  to="/contact"> Messege me</router-link></p>
+         <a href="mailto:gaoubouzi@gmail.com"><p class="col-md-6">Git in touch</p></a>
         </div>
       </div>
         
@@ -88,7 +88,7 @@ $textColor:#8892b0;
               position: absolute;
               font-size: 7px;
               color: white;
-              opacity: 1;
+              opacity: .7;
             }
             &::before{
               content: "";
@@ -98,7 +98,7 @@ $textColor:#8892b0;
               background: #fff;
               width: 100vh;
               height: 1px;
-              opacity: .7;
+              opacity: .4;
             }
 
    
@@ -138,7 +138,7 @@ $textColor:#8892b0;
                   left: -5%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
                 &::after
                 {
@@ -149,7 +149,7 @@ $textColor:#8892b0;
                   left: -5%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
             }
             .content{
@@ -157,13 +157,14 @@ $textColor:#8892b0;
               overflow: hidden;
               padding: 0;
               margin: 20px;
-              .links p,a{
+              .links p{
                 font-size: 12px;
                 color: $colorPrimary !important;
                 opacity: .8;
                 position: relative;
                 transition: all .5s ease-out;
                 cursor: pointer;
+                display: inline;
                 width: auto;
                 &::before{
                   content: "";

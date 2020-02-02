@@ -5,7 +5,7 @@
   <div class="row  text-center">
     <h2 ref="touch" class="col-md-12 text-center">Get In Touch</h2>
     
-    <div class="col-md-12  discreption"><p> I'm  currently looking for full time jop opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
+    <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
      <form id="contact-form" data-netlify="true"  action="POST"  class="col-md-12">
      <div class="row justify-content-between">
@@ -32,7 +32,7 @@
           <button  type="submit"     value="Send Email" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
-          <span class="info">If you'd rather get in touch with me by email <span class="microInfo">gaoubouzi@gmail.com</span> or phone <span class="microInfo">+212 6 97 85 41 90</span> I'll happy to hear from you.</span>
+          <span class="info">If you'd rather get in touch with me by email <a href="mailto:gaoubouzi@gmail.com"><span  class="microInfo">gaoubouzi@gmail.com</span></a> or phone <span class="microInfo">+1 289 941 3488</span> I'll happy to hear from you.</span>
         </div>
     </form>
   </div>
@@ -174,7 +174,7 @@ margin: 0;
               position: absolute;
               font-size: 7px;
               color: white;
-              opacity: 1;
+              opacity: .7;
             }
             &::before{
               content: "";
@@ -184,7 +184,7 @@ margin: 0;
               background: #fff;
               width: 100vh;
               height: 1px;
-              opacity: .7;
+              opacity: .4;
             }
 
    
@@ -230,7 +230,7 @@ margin: 0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
                 &::after
                 {
@@ -241,7 +241,7 @@ margin: 0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
     .submit{
     width: 150px;

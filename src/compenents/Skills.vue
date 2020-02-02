@@ -29,7 +29,7 @@
          <div class="skill col-md-4 col-lg-4 ">
           <h3>Other Things</h3>
           <ul>
-            <li>Git / GitHub</li>
+            <li>GitHub</li>
             <li>Photoshop / Figma</li>
          
           </ul>
@@ -114,7 +114,7 @@ $textColor:#8892b0;
             padding-top: 15%;
             position: relative;
             &::after{
-              content: "What I Can a DO ?";
+              content: "What i can do?";
               bottom: -10%;
               right: -9%;
               position: absolute;
@@ -151,7 +151,7 @@ $textColor:#8892b0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
                 &::after
                 {
@@ -162,7 +162,7 @@ $textColor:#8892b0;
                   left: 0%;
                   font-size: 18px;
                   font-family: 'La Belle Aurore',cursive; 
-                  opacity: 0.3;
+                  opacity: 0.2;
                 }
     
     
@@ -248,12 +248,20 @@ $textColor:#8892b0;
 
   .main{
     
-    padding-top: 25%;
+    padding-top: 10%;
+    padding-bottom:15%;
     &::before,&::after{
       display: none
     }
+    
 
   }
+
+  .skills h1 {
+  
+    padding-top: 30%;
+  
+}
   
 }
 

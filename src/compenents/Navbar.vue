@@ -6,7 +6,7 @@
      <router-link to='/'><li>Home</li></router-link>
      <router-link to='/about'><li>About</li></router-link>
      <router-link to='/skills'><li>Skills</li></router-link>
-     <router-link to='/works'><li>works</li></router-link>
+     <router-link to='/works'><li>Works</li></router-link>
      <router-link to='/contact'><li>Contact</li></router-link>
    </ul>
 </div>

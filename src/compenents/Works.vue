@@ -14,8 +14,8 @@
           <h6>Featured Project</h6>
           <h3>Optometrist Project</h3>
           <div class="content2">
-            <p>I  built this website shortly as a full-stack developer for an optometry who had  hired me to make a  website to grow thier business
-               and to make sure the client was able to make an appointment and contact them easily</p>
+            <p>I built this website recently as a full-stack developer for an optometrist who had  hired me to make a  website to grow thier business
+               and to make sure their  clients are able to make an appointments and contact them easily</p>
            
           </div>
            <div class="feature">
@@ -39,7 +39,8 @@
           <h6>Featured Project</h6>
           <h3>TodoList Project</h3>
           <div class="content2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum explicabo vero corporis consequuntur officia amet tenetur alias, reprehenderit impedit, nesciunt est quod nulla recusandae! Velit perferendis dolore eligendi facilis.</p>
+            <p>TodoList it's a small web app which you can add and remove your daily todo with nice animation.</p>
+            <p>I used Vuejs2 to create this web app to improve my skills init.</p>
            
           </div>
            <div class="feature">
@@ -69,7 +70,9 @@
           <h6>Featured Project</h6>
           <h3>Social Media app (BouziWeb)</h3>
           <div class="content2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum explicabo vero corporis consequuntur officia amet tenetur alias, reprehenderit impedit, nesciunt est quod nulla recusandae! Velit perferendis dolore eligendi facilis.</p>
+            <p>BouziWeb is a social media-inspired blog website that I made It is my third project using Laravel's new features.
+              The main goal of this app it's to make it a platform for the beginning developer.</p>
+              <p>The main technologies I've been used in this project are JQeury, Ajax and Laravel.</p>
            
           </div>
            <div class="feature">
@@ -94,7 +97,7 @@
           <h6>Featured Project</h6>
           <h3>Portfolio-V1 Project</h3>
           <div class="content2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum explicabo vero corporis consequuntur officia amet tenetur alias, reprehenderit impedit, nesciunt est quod nulla recusandae! Velit perferendis dolore eligendi facilis.</p>
+            <p>this is was  my secound secound portfolio built using jQeury And PHP which contains some of my project and my skills  </p>
            
           </div>
            <div class="feature">
@@ -186,13 +189,13 @@ $background-discription:#172945;
             top: 15%;
             position: absolute;
             &::after{
-              content: "I take care about the details.";
+              content: "I care about the details.";
               bottom: -10%;
               right: -25%;
               position: absolute;
               font-size: 7px;
               color: white;
-              opacity: 1;
+              opacity: 0.7;
             }
             &::before{
               content: "";
@@ -202,7 +205,7 @@ $background-discription:#172945;
               background: #fff;
               width: 100vh;
               height: 1px;
-              opacity: .7;
+              opacity: .4;
             }
 
    
