@@ -7,16 +7,16 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form id="contact-form" data-netlify="true"  action="POST"  class="col-md-12">
+     <form id="contact-form" @submit.prevent="sendEmail" action="POST"  class="col-md-12">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
-             <input type="text" v-model="Name" name="name" autocomplete="off"  required/>
+             <input type="text" v-model="Name" name="user_name" autocomplete="off"  required/>
              <label for="name"  class="label-name"><span class="content-name">Name</span></label>
              <span class="error"  id="name">{{ErrorName}}</span>
         </div>
         <div class="input col-lg-6 offset-md-1 offset-lg-1  col-md-6 col-sm-12">
-             <input type="email" v-model='Email'  autocomplete="off" name="email" required/>
+             <input type="email" v-model='Email'  autocomplete="off" name="user_email" required/>
              <label for="email"  class="label-name"><span class="content-name">Email</span></label>
              <span class="error"  id="email">{{ErrorEmail}}</span>
         </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-
+import emailjs from 'emailjs-com';
 export default {
 
   data(){
@@ -77,8 +77,14 @@ export default {
 
 
   methods:{
-      sendEmail(e){
-               
+      sendEmail: (e) => {
+      emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
+        .then((result) => {
+            console.log('SUCCESS!', response.status, response.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+
         //  if(this.Name===""){
         //   this.ErrorName="Insert your name Please!"
         //  }
@@ -88,64 +94,14 @@ export default {
         //  else if(this.Message===""){
         //   this.ErrorMessage="Insert your Message Please!"
         // }
-
-      
-                e.preventDefault();
-                let currentObj = this;
-                this.axios.post('http://localhost:8000/php/contact.php', {
-                    name: this.Name,
-                    email: this.Email,
-                    Message:this.Message
-                })
-                .then(function (response) {
-                    currentObj.output = response.data;
-                })
-                .catch(function (error) {
-                    currentObj.output = error;
-                });
-            }
+   
+      }
         
-       
-        //       else 
-        //       // if(!this.Name==="" && !this.Email==="" && !this.Message===""){
-               
-                  
-                  // $('#contact-form').submit(function(e) {
-                      // e.preventDefault();
-                      // var postdata = $('#contact-form').serialize();
-                      //  console.log(this.Name,this.Email,this.Message)
-                      // $.ajax({
-                      //     type: 'POST',
-                      //     url: '../php/contact.php',
-                      //     data: postdata,
-                      //     dataType: 'json',
-                      //     success: function(json) {
-                              
-                      //         if(json.isSuccess) 
-                      //         {
-                                 
-                      //             alert('good job');
-                      //             this.Name="";
-                      //             this.Email="";
-                      //             this.Message="";
-                      //         }
-                                        
-                      //     }
-                      // });
-                  // });
-
-         
-              
-      // }
+   }
 
 
 
-                
-         
-        
-         
-    
-  }
+
 }
 </script>
 
