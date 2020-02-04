@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form id="contact-form" @submit.prevent="sendEmail" action="POST"  class="col-md-12">
+     <form class="contact-form col-md-12" @submit.prevent="sendEmail" action="POST">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
@@ -29,7 +29,7 @@
         </div>
        </div>
         <div class="col-lg-12 col-md-12 text-center">
-          <button  type="submit"     value="Send Email" class="submit">Send Message</button>
+          <button  type="submit"    value="Send" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
           <span class="info">If you'd rather get in touch with me by email <a href="mailto:gaoubouzi@gmail.com"><span  class="microInfo">gaoubouzi@gmail.com</span></a> or phone <span class="microInfo">+1 289 941 3488</span> I'll happy to hear from you.</span>
