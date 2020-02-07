@@ -36,6 +36,11 @@
         </div>
     </form>
   </div>
+
+    <div   id="flash_message">
+        <i class="fa fa-check"></i>
+        Your message has been send successful
+      </div>
 </div>
   
 
@@ -44,6 +49,7 @@
 </template>
 
 <script>
+
 import emailjs from 'emailjs-com';
 export default {
 
@@ -55,7 +61,9 @@ export default {
         ErrorMessage:"",
         Name:"",
         Email:"",
-        Message:""
+        Message:"",
+        
+      
 
     }
   },
@@ -78,22 +86,40 @@ export default {
 
   methods:{
       sendEmail: (e) => {
-      emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
-        .then((result) => {
-            console.log('SUCCESS!', response.status, response.text);
-        }, (error) => {
-            console.log('FAILED...', error);
-        });
 
-        //  if(this.Name===""){
-        //   this.ErrorName="Insert your name Please!"
-        //  }
-        //   else if(this.Email===""){
-        //   this.ErrorEmail="Insert your Email Please!"
-        // }
-        //  else if(this.Message===""){
-        //   this.ErrorMessage="Insert your Message Please!"
-        // }
+    
+      if(this.Name===""){
+          this.ErrorName="Insert your name Please!"
+         }
+          else if(this.Email===""){
+          this.ErrorEmail="Insert your Email Please!"
+        }
+         else if(this.Message===""){
+          this.ErrorMessage="Insert your Message Please!"
+        }
+        else 
+
+          emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
+            .then((result) => {
+                // console.log('SUCCESS!', response.status, response.text);
+                     
+                     this.Name="",
+                     this.Email="",
+                     this.Message="",
+                   
+                       document.getElementById("flash_message").style.display = "block";
+        
+                
+                         
+                         
+                        
+        
+                    
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+           
+
    
       }
         
@@ -295,7 +321,37 @@ margin: 0;
                 font-size: 14px;
             }
 
- 
+ #flash_message{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background: #030d1f;
+    padding: 15px;
+    color: #ffffffad;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 15px;
+    animation: flash 2s ease-in-out 1s forwards;
+    z-index: 99;
+  
+}
+@keyframes flash {
+
+  0%{
+    display: block;
+    
+  }
+  70%{
+    display: block;
+   
+  }
+  100%{
+    display: none;
+    
+  }
+  
+  
+}
 
 
 

@@ -10,12 +10,13 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "@sendgrid/mail": "^6.5.1",
+    "@sendgrid/mail": "^6.5.2",
     "axios": "^0.19.2",
     "emailjs-com": "^2.4.1",
     "gh-pages": "^2.2.0",
     "netlify-lambda": "^1.6.3",
-    "node": "^13.6.0",
+    "node": "^13.7.0",
+    "npm-check-updates": "^4.0.1",
     "vue": "^2.5.11",
     "vue-axios": "^2.1.5",
     "vue-router": "^3.1.5",

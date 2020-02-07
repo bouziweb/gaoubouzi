@@ -39,7 +39,7 @@
           <h6>Featured Project</h6>
           <h3>TodoList Project</h3>
           <div class="content2">
-            <p>TodoList is a small web app tha can help you add or remove your daily tasks with nice animation.</p>
+            <p>TodoList is a web app that can help you add or remove your daily tasks with nice animation.</p>
             <p>I used Vuejs2 to create this web app to improve my skills init.</p>
            
           </div>
