@@ -39,7 +39,7 @@
           <h6>Featured Project</h6>
           <h3>TodoList Project</h3>
           <div class="content2">
-            <p>TodoList it's a small web app which you can add and remove your daily todo with nice animation.</p>
+            <p>TodoList is a small web app tha can help you add or remove your daily tasks with nice animation.</p>
             <p>I used Vuejs2 to create this web app to improve my skills init.</p>
            
           </div>
@@ -71,7 +71,7 @@
           <h3>Social Media app (BouziWeb)</h3>
           <div class="content2">
             <p>BouziWeb is a social media-inspired blog website that I made It is my third project using Laravel's new features.
-              The main goal of this app it's to make it a platform for the beginning developer.</p>
+              The main goal of this app is to make a platform for the beginning developer to network and build their skills.</p>
               <p>The main technologies I've been used in this project are JQeury, Ajax and Laravel.</p>
            
           </div>
@@ -97,7 +97,7 @@
           <h6>Featured Project</h6>
           <h3>Portfolio-V1 Project</h3>
           <div class="content2">
-            <p>this is was  my secound secound portfolio built using jQeury And PHP which contains some of my project and my skills  </p>
+            <p>This is my second portfolio I built using jQeury and PHP which contains some of my previous projects and skills </p>
            
           </div>
            <div class="feature">
