@@ -1,17 +1,18 @@
 <template>
 
 <div>
+  
     <div v-if="show" class="intro">
        <app-intro></app-intro>
     </div>
 
 
     <div v-else class="portfolio container">
+
         
       <!-- ------------------------ -->
       <app-navbar></app-navbar>
       <!-- ------------------------ -->
-      <!-- <app-intro class="intro"></app-intro> -->
       <div  class="pages">
           
           <transition name="fade" >
@@ -40,7 +41,7 @@ import Navbar from './compenents/Navbar.vue'
 import BarShow from './compenents/BarShow.vue'
 import Footer from './compenents/Footer.vue'
 import HomeBar from './compenents/HomeBar.vue'
-
+// import offline from './compenents/offline.vue'
 
 export default {
 
@@ -61,6 +62,7 @@ export default {
     appFooter:Footer,
     appHomeBar:HomeBar,
     appIntro:intro,
+    // appOffline:offline
    
     
   }

@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form class="contact-form col-md-12" @submit.prevent="sendEmail" action="POST">
+     <form class="contact-form col-md-12" @submit.prevent="submit"  action="POST">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
@@ -29,7 +29,7 @@
         </div>
        </div>
         <div class="col-lg-12 col-md-12 text-center">
-          <button  type="submit"    value="Send" class="submit">Send Message</button>
+          <button    type="submit"  value="Send" class="submit">Send Message</button>
         </div>
          <div class="col-lg-12 col-md-12 text-center">
           <span class="info">If you'd rather get in touch with me by email <a href="mailto:gaoubouzi@gmail.com"><span  class="microInfo">gaoubouzi@gmail.com</span></a> or phone <span class="microInfo">+1 289 941 3488</span> I'll happy to hear from you.</span>
@@ -37,9 +37,9 @@
     </form>
   </div>
 
-    <div   id="flash_message">
+    <div v-if="display_flash"   id="flash_message">
         <i class="fa fa-check"></i>
-        Your message has been send successful
+        {{flash_message}}
       </div>
 </div>
   
@@ -62,6 +62,9 @@ export default {
         Name:"",
         Email:"",
         Message:"",
+        flash_message:'',
+        display_flash:false
+        
         
       
 
@@ -85,43 +88,48 @@ export default {
 
 
   methods:{
-      sendEmail: (e) => {
 
-    
-      if(this.Name===""){
+    submit(e){
+
+        if(this.Name===""){
           this.ErrorName="Insert your name Please!"
+          
          }
-          else if(this.Email===""){
+         else if(this.Email===""){
           this.ErrorEmail="Insert your Email Please!"
+          
         }
          else if(this.Message===""){
           this.ErrorMessage="Insert your Message Please!"
+          this.flash_message="Please try again ";
+          
         }
-        else 
+        else{
 
-          emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
-            .then((result) => {
-                // console.log('SUCCESS!', response.status, response.text);
-                     
-                     this.Name="",
-                     this.Email="",
-                     this.Message="",
-                   
-                       document.getElementById("flash_message").style.display = "block";
-        
-                
-                         
-                         
-                        
-        
-                    
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
-           
-
-   
-      }
+            this.display_flash=true;  
+            this.flash_message="Your message has been send ";
+            this.display_flash=true
+            this.Name="",
+            this.Email="",
+            this.Message="",
+            this.ErrorName="",
+            this.ErrorEmail="",
+            this.ErrorMessage="",
+            this.sendEmail(e);
+    }
+    },
+  
+      sendEmail: (e) => {
+      
+      //  e.preventDefault();
+     
+      
+                emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
+                          
+                  
+               }
+            
+     
         
    }
 
@@ -324,29 +332,28 @@ margin: 0;
  #flash_message{
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 50px; 
     background: #030d1f;
     padding: 15px;
     color: #ffffffad;
     border-radius: 8px;
     font-family: sans-serif;
     font-size: 15px;
-    animation: flash 2s ease-in-out 1s forwards;
+    transition:  all .5s ease;
+    animation: flash 2s ease-in-out .5s forwards;
     z-index: 99;
   
 }
 @keyframes flash {
 
   0%{
-    display: block;
+    visibility:  visible;
+    
     
   }
-  70%{
-    display: block;
-   
-  }
+ 
   100%{
-    display: none;
+     visibility:  hidden;
     
   }
   

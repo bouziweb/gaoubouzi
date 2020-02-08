@@ -121,6 +121,36 @@
 
           <!-- ------------------------------------- -->
 
+          <div class="row">
+           <div class="mockup left col-md-6">
+           <div class="content1"><img src="../assets/works/burger.png" alt=""></div>
+        </div>
+        <div class="discription right col-md-6">
+          <h6>Featured Project</h6>
+          <h3>Burger GAoubouzi </h3>
+          <div class="content2">
+            <p>BouziWeb is a social media-inspired blog website that I made It is my third project using Laravel's new features.
+              The main goal of this app is to make a platform for the beginning developer to network and build their skills.</p>
+              <p>The main technologies I've been used in this project are JQeury, Ajax and Laravel.</p>
+           
+          </div>
+           <div class="feature">
+              <ul>
+                <li>PHP</li>
+                <li>Css3</li>
+                <li>Bootstrap</li>
+
+              </ul>
+            </div>
+            <div class="links">
+              <a href=""><i class="fab fa-github"></i></a>
+              <a href=""><i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+        
+      </div>
+       <hr>
+
 
     </div>
   </div>

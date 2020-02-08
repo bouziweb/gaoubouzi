@@ -39,10 +39,10 @@
 export default {
   mounted(){
     
-     const name =document.querySelectorAll("#name path");
-     for( let i=1; i<name.length;i++){
-       console.log(`letter:${i} is ${name[i].getTotalLength()}`)
-     }
+    //  const name =document.querySelectorAll("#name path");
+    //  for( let i=1; i<name.length;i++){
+    //    console.log(`letter:${i} is ${name[i].getTotalLength()}`)
+    //  }
   }
 }
 </script>
@@ -79,7 +79,7 @@ export default {
   
   max-width: 100%;
  
-  animation: fill 3s ease forwards 6.3s;
+  animation: fill 4s ease forwards 6.3s;
   
   
   
