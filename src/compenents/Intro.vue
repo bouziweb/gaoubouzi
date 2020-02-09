@@ -72,7 +72,7 @@ export default {
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  animation: fade-in 1s ease 7.5s forwards;
+  animation: fade-in 1s ease 7.6s forwards;
 
 }
 #name{
@@ -193,7 +193,7 @@ export default {
   position: relative;
   display: inline-block;
   visibility: hidden;
-  animation: hidde 0.2s  6.4s forwards;
+  animation: hidde .4s  6.4s forwards;
 
   &:after{
     display: block;
@@ -270,7 +270,7 @@ export default {
     opacity: 1;
 
   }
-  70%{
+  90%{
     opacity: 0;
   }
   100%{
