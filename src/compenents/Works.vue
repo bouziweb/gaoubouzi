@@ -27,7 +27,7 @@
             </div>
             <div class="links">
               <a href=""><i class="fab fa-github"></i></a>
-              <a href=""><i class="fas fa-external-link-alt"></i></a>
+              <a target="_blank" href="https://www.dragavision.ca/"><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
      </div>
@@ -51,8 +51,8 @@
               </ul>
             </div>
             <div class="links">
-              <a href=""><i class="fab fa-github"></i></a>
-              <a href=""><i class="fas fa-external-link-alt"></i></a>
+              <a target="_blank" href="https://github.com/bouziweb/todolist"><i class="fab fa-github"></i></a>
+              <a target="_blank" href="https://bouziweb.github.io/todolist/"><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
            <div class="mockup  col-md-6">
@@ -84,7 +84,7 @@
               </ul>
             </div>
             <div class="links">
-              <a href=""><i class="fab fa-github"></i></a>
+              <a target="_blank" href="https://github.com/bouziweb/bouziweb"><i class="fab fa-github"></i></a>
               <a href=""><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
@@ -109,8 +109,8 @@
               </ul>
             </div>
             <div class="links">
-              <a href=""><i class="fab fa-github"></i></a>
-              <a href=""><i class="fas fa-external-link-alt"></i></a>
+              <a target="_blank" href="https://github.com/bouziweb/bouziweb2"><i class="fab fa-github"></i></a>
+              <a target="_blank" href="https://bouziweb2.netlify.com/"><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
            <div class="mockup  col-md-6">
@@ -129,9 +129,7 @@
           <h6>Featured Project</h6>
           <h3>Burger GAoubouzi </h3>
           <div class="content2">
-            <p>BouziWeb is a social media-inspired blog website that I made It is my third project using Laravel's new features.
-              The main goal of this app is to make a platform for the beginning developer to network and build their skills.</p>
-              <p>The main technologies I've been used in this project are JQeury, Ajax and Laravel.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam, natus aliquid ab aut temporibus nesciunt error nisi distinctio labore. Est totam exercitationem aperiam commodi sit illo, quo nemo repellat.</p>
            
           </div>
            <div class="feature">
