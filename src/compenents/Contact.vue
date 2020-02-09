@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form class="contact-form col-md-12" @submit.prevent="submit">
+     <form class="contact-form col-md-12" data-netlify="true" method="POST" @submit.prevent="submit">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
