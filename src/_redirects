@@ -3,3 +3,5 @@
 http://bouzi.me/skills /skills             
 http://bouzi.me/works  /works            
 http://bouzi.me/contact  /contact      
+
+http://achraf20.netlify.com/* http://bouzi.me/:splat 301!
