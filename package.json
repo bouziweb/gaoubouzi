@@ -13,6 +13,7 @@
     "@sendgrid/mail": "^6.5.2",
     "axios": "^0.19.2",
     "emailjs-com": "^2.4.1",
+    "gatsby-plugin-netlify": "^2.1.32",
     "gh-pages": "^2.2.0",
     "netlify-lambda": "^1.6.3",
     "node": "^13.7.0",
