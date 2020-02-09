@@ -7,7 +7,7 @@
     
     <div class="col-md-12  discreption"><p> I'm  currently looking for full time job opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!</p></div>
    
-     <form class="contact-form col-md-12" @submit.prevent="submit"  action="POST">
+     <form class="contact-form col-md-12" @submit.prevent="submit" netlify="true" action="POST">
      <div class="row justify-content-between">
        <input type="hidden" name="contact_number">
           <div class="input col-lg-5 col-md-5 align-self-end col-sm-12">
@@ -92,7 +92,8 @@ export default {
     submit(e){
 
         if(this.Name===""){
-          this.ErrorName="Insert your name Please!"
+          this.ErrorName="Insert your name Please!";
+          
           
          }
          else if(this.Email===""){
@@ -108,7 +109,6 @@ export default {
 
             this.display_flash=true;  
             this.flash_message="Your message has been send ";
-            this.display_flash=true
             this.Name="",
             this.Email="",
             this.Message="",
@@ -121,16 +121,12 @@ export default {
   
       sendEmail: (e) => {
       
-      //  e.preventDefault();
-     
       
                 emailjs.sendForm('gmail', 'template_xTHl6g5R', e.target, 'user_70x8wfYI7fkbjeXKd9wek')
                           
                   
                }
-            
-     
-        
+         
    }
 
 
@@ -262,6 +258,7 @@ margin: 0;
        margin:  20px 0px;
       height: 60px;
       display: inline-block;
+      background-color: #0D1729;
       
       input{
         width: 100%;
@@ -282,7 +279,8 @@ margin: 0;
 
         }
         &:focus + label::after,&:valid + label::after{
-          transform: translateY(0%)
+          transform: translateY(0%);
+          background-color: #0D1729;
         }
           
           }
