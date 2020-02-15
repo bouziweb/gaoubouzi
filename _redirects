@@ -1,2 +1,3 @@
 
-http://achraf20.netlify.com/* http://bouzi.me/:splat 301!
+/* /index.html 200
+https://achraf20.netlify.com/* https://www.bouzi.me/:splat 301!

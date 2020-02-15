@@ -69,7 +69,7 @@ a{
     background-color: $navbarColor;
     z-index: 99;
     color: $navColor;
-    position: absolute;
+    position: fixed;
     right: 0;
     border-left: 1px solid $navColor;
     transition: all .8s ease;

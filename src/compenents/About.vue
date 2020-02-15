@@ -13,7 +13,7 @@
         <p>Hello! I'm Achraf, a web devloper based in Hamilton, ON who enjoys building things, specializing in building (and occasionally designing) exceptional, high-quality websites and applications.</p>
         <p>After graduating from Specialized Institute of Applied Technology in Morocco, I started working as a freelancer with a very small company who needed a website for their business. </p>
         <div class="col-md-12 links">
-          <p class="col-md-5"> See my resume</p>
+          <p @click="resume" class="col-md-5"> See my resume</p>
          <a href="mailto:gaoubouzi@gmail.com"><p class="col-md-6">Git in touch</p></a>
         </div>
       </div>
@@ -47,6 +47,11 @@ export default {
     
     
 
+  },
+  methods:{
+    resume(){
+      window.open("../../src/assets/Resume2020.pdf", "_blank");  
+    }
   }
 }
 </script>

@@ -3,7 +3,7 @@ import About from './compenents/About.vue';
 import Skills from './compenents/Skills.vue';
 import Works from './compenents/Works.vue';
 import Contact from './compenents/Contact.vue';
-import offline from './compenents/offline.vue'
+import offline from './compenents/offline.vue';
 
 
 export const routes=[

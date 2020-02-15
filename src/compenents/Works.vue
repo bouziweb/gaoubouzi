@@ -129,19 +129,21 @@
           <h6>Featured Project</h6>
           <h3>Burger GAoubouzi </h3>
           <div class="content2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aliquam, natus aliquid ab aut temporibus nesciunt error nisi distinctio labore. Est totam exercitationem aperiam commodi sit illo, quo nemo repellat.</p>
-           
+          <p>The website contains a menu for a fast-food 
+                restaurant.</p>
+                <p>Built an admin interface to control the whole 
+                data using PHP.</p>           
           </div>
            <div class="feature">
               <ul>
                 <li>PHP</li>
-                <li>Css3</li>
-                <li>Bootstrap</li>
+                <li>MySQL</li>
+                
 
               </ul>
             </div>
             <div class="links">
-              <a href=""><i class="fab fa-github"></i></a>
+              <a target="_blank" href="https://github.com/bouziweb/Restaurant"><i class="fab fa-github"></i></a>
               <a href=""><i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
